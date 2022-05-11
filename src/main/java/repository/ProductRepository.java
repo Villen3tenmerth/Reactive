@@ -37,7 +37,7 @@ public class ProductRepository {
                         new Product(product.getId(),
                                 product.getName(),
                                 product.getDescription(),
-                                product.getPrice() * currency.getCoef())
+                                currency.convertFromRub(product.getPrice()))
                                 .toString());
     }
 

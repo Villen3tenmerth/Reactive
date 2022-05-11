@@ -92,7 +92,7 @@ public class CartRepostiroy {
             } else {
                 return provider.getDatabase()
                         .getCollection(dbTableName)
-                        .deleteOne(eq("userId", userId))
+                        .deleteMany(eq("userId", userId))
                         .map(deleteResult -> "Deleted " + deleteResult.getDeletedCount() + " items");
             }
         });

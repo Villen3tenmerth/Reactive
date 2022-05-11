@@ -9,11 +9,7 @@ public enum Currency {
         this.coef = coef;
     }
 
-    public double getCoef() {
-        return coef;
-    }
-
-    public double convertToRub(double price) {
-        return coef * price;
+    public double convertFromRub(double price) {
+        return price / coef;
     }
 }
